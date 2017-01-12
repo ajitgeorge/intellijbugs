@@ -3,8 +3,8 @@ package intellijbugs;
 import java.util.function.Consumer;
 
 public class CanBeMadeLocal {
-    private final Consumer<String> a;
-    private final Consumer<String> b;
+    private final Consumer<String> a;  // should warn that 'a' can be made local
+    private final Consumer<String> b;  // does warn that 'b' can be made local
 
     private CanBeMadeLocal() {
         a = t -> {};
