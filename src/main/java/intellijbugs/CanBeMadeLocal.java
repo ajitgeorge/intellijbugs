@@ -12,6 +12,7 @@ public class CanBeMadeLocal {
         System.out.println(b);
 
         // With these lines, IntelliJ does not recognize that 'a' can be made local.
+        // Behavior is same when using anonymous class instead of λ
         Runnable runnable = () -> System.out.println(a);
         runnable.run();
     }
